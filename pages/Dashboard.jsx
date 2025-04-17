@@ -25,23 +25,23 @@ function Dashboard() {
   }, []);
   return (
     <>
-      <div className="flex space-x-2">
-        <img src={overviewLogo}></img>
-        <h1 className="text-2xl font-bold">Overview</h1>
+      <div className="flex items-center space-x-3 mb-6">
+        <img src={overviewLogo} alt="Overview Logo" />
+        <h1 className="text-2xl font-bold text-gray-800">Overview</h1>
       </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-6 mb-8">
         {overview && (
           <>
             <OverviewCard
               obj={overview.turnover}
               title={"Turnover"}
-              bgColor={"bg-pink-200"}
-              ringColor={"ring-pink-500"}
+              bgColor={"bg-pink-100"}
+              ringColor={"ring-pink-400"}
               icon={
                 <ShoppingCartOutlined
                   style={{
-                    color: "oklch(0.67 0.3 2.17)",
-                    fontSize: "25px",
+                    color: "#ec4899",
+                    fontSize: "24px",
                   }}
                 />
               }
@@ -50,13 +50,13 @@ function Dashboard() {
             <OverviewCard
               obj={overview.profit}
               title={"Profit"}
-              bgColor={"bg-blue-200"}
-              ringColor={"ring-blue-500"}
+              bgColor={"bg-blue-100"}
+              ringColor={"ring-blue-400"}
               icon={
                 <MoneyCollectOutlined
                   style={{
-                    color: "oklch(62.3% 0.214 259.815)",
-                    fontSize: "25px",
+                    color: "#3b82f6",
+                    fontSize: "24px",
                   }}
                 />
               }
@@ -65,13 +65,13 @@ function Dashboard() {
             <OverviewCard
               obj={overview.newCustomers}
               title={"New Customers"}
-              bgColor={"bg-blue-200"}
-              ringColor={"ring-blue-500"}
+              bgColor={"bg-green-100"}
+              ringColor={"ring-green-400"}
               icon={
                 <UserOutlined
                   style={{
-                    color: "oklch(62.3% 0.214 259.815)",
-                    fontSize: "25px",
+                    color: "#10b981",
+                    fontSize: "24px",
                   }}
                 />
               }
@@ -80,14 +80,12 @@ function Dashboard() {
           </>
         )}
       </div>
-      <div className="flex justify-between">
-        <div className="flex space-x-2">
-          <img src={detailedReport}></img>
-          <h1 className="text-2xl font-bold w-[300px]">Detailed Report</h1>
+      <div className="flex justify-between items-center mb-6">
+        <div className="flex items-center space-x-3">
+          <img src={detailedReport} alt="Detailed Report" />
+          <h1 className="text-2xl font-bold text-gray-800">Detailed Report</h1>
         </div>
-        <div className="flex space-x-2 items-center justify-center">
-          <AddNewButton />
-        </div>
+        <AddNewButton />
       </div>
       <div className="datatable">
         <DataTable />

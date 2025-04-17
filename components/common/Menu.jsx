@@ -11,87 +11,107 @@ import banner from "../../assets/Group.png";
 
 function Menu() {
   return (
-    <div className="flex flex-col justify-between h-full">
+    <div className="flex flex-col justify-between min-h-screen bg-gray-50">
+      {/* Upper Menu */}
       <div className="upper-menu">
-        {" "}
-        <div className="p-3 flex items-start">
-          <img src={logo}></img>
+        <div className="p-3 flex items-center justify-center">
+          <img src={logo} alt="Logo" className="h-8" />
         </div>
-        <div className="nav p-5 space-y-[5px] text-lg text-gray-500">
+        <div className="nav p-5 space-y-2 text-lg text-gray-700">
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out`
             }
             to={"/dashboard"}
           >
-            <img src={dashboard} className="mr-2"></img>{" "}
-            <span className="font-semibold">Dashboard</span>
+            <img src={dashboard} className="mr-3 w-5 h-5" alt="Dashboard" />
+            <span className="font-medium">Dashboard</span>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out `
             }
             to={"/project"}
           >
-            <img src={project} className="mr-2"></img>{" "}
-            <span className="font-semibold">Project</span>
+            <img src={project} className="mr-3 w-5 h-5" alt="Project" />
+            <span className="font-medium">Project</span>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out`
             }
             to={"/teams"}
           >
-            <img src={team} className="mr-2"></img>{" "}
-            <span className="font-semibold">Teams</span>
+            <img src={team} className="mr-3 w-5 h-5" alt="Teams" />
+            <span className="font-medium">Teams</span>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out`
             }
             to={"/analytics"}
           >
-            <img src={analytist} className="mr-2"></img>{" "}
-            <span className="font-semibold">Analytics</span>
+            <img src={analytist} className="mr-3 w-5 h-5" alt="Analytics" />
+            <span className="font-medium">Analytics</span>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out`
             }
             to={"/mess"}
           >
-            <img src={mess} className="mr-2"></img>{" "}
-            <span className="font-semibold">Messages</span>
+            <img src={mess} className="mr-3 w-5 h-5" alt="Messages" />
+            <span className="font-medium">Messages</span>
           </NavLink>
           <NavLink
             className={({ isActive }) =>
               `${
-                isActive ? "bg-pink-500 text-white" : ""
-              } flex p-3 rounded-[5px]`
+                isActive
+                  ? "bg-pink-600 text-white font-bold shadow-md"
+                  : "hover:bg-white hover:text-gray-600 text-gray-500"
+              } flex items-center p-3 rounded-md transition-colors duration-300 ease-in-out`
             }
             to={"/intergrations"}
           >
-            <img src={intergration} className="mr-2"></img>{" "}
-            <span className="font-semibold">Intergrations</span>
+            <img
+              src={intergration}
+              className="mr-3 w-5 h-5"
+              alt="Integrations"
+            />
+            <span className="font-medium">Intergrations</span>
           </NavLink>
         </div>
       </div>
-      <div className="flex justify-center items-center p-10">
-        <div className="bg-blue-200 p-10 space-y-2">
-          <img src={banner}></img>
-          <p className="text-center font-bold">V2.0 is available</p>
-          <button className="text-blue-500 flex justify-center items-center bg-white w-full rounded-[5px] ring-2 ring-blue-700 font-bold hover:bg-blue-700 hover:text-white transition-all duration-500">
-            Try now
+
+      {/* Banner */}
+      <div className="flex justify-center items-center p-5">
+        <div className="bg-pink-50 p-6 space-y-3 rounded-lg shadow-md w-full max-w-sm">
+          <img src={banner} alt="Banner" className="mx-auto h-20" />
+          <p className="text-center font-semibold text-gray-700">
+            New version V2.0 is available!
+          </p>
+          <button className="bg-pink-600 text-white font-bold py-2 px-4 rounded-md hover:bg-pink-700 transition-colors duration-300 w-full">
+            Try Now
           </button>
         </div>
       </div>

@@ -116,9 +116,10 @@ function DataTable() {
         pagination={{
           pageSize: 6,
         }}
+        className="rounded-lg shadow-md bg-white"
       />
       {data && (
-        <div className="mt-2 text-gray-600 text-md">{data.length} results</div>
+        <div className="mt-4 text-gray-600 text-sm">{data.length} results</div>
       )}
 
       <DataModal
