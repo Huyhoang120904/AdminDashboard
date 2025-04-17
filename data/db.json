@@ -1,0 +1,139 @@
+{
+  "dashboardSummary": {
+    "turnover": {
+      "value": 92405,
+      "changePercentage": 5.39,
+      "period": "month"
+    },
+    "profit": {
+      "value": 32218,
+      "changePercentage": 5.39,
+      "period": "month"
+    },
+    "newCustomers": {
+      "value": 298,
+      "changePercentage": 6.84,
+      "period": "month"
+    }
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2023-10-01",
+      "amount": 5200,
+      "customerId": 1,
+      "type": "sale"
+    },
+    {
+      "id": 2,
+      "date": "2023-10-03",
+      "amount": 3150,
+      "customerId": 2,
+      "type": "sale"
+    },
+    {
+      "id": 3,
+      "date": "2023-10-05",
+      "amount": 4800,
+      "customerId": 3,
+      "type": "sale"
+    },
+    {
+      "id": 4,
+      "date": "2023-10-07",
+      "amount": 2100,
+      "customerId": 4,
+      "type": "refund"
+    },
+    {
+      "id": 5,
+      "date": "2023-10-09",
+      "amount": 6300,
+      "customerId": 5,
+      "type": "sale"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "joinDate": "2023-09-15",
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "name": "Maria Garcia",
+      "email": "maria.garcia@example.com",
+      "joinDate": "2023-09-20",
+      "isNew": true
+    },
+    {
+      "id": 3,
+      "name": "David Johnson",
+      "email": "david.johnson@example.com",
+      "joinDate": "2023-09-25",
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "name": "Lisa Wong",
+      "email": "lisa.wong@example.com",
+      "joinDate": "2022-11-10",
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "name": "Robert Taylor",
+      "email": "robert.taylor@example.com",
+      "joinDate": "2023-10-01",
+      "isNew": true
+    }
+  ],
+  "statistics": {
+    "monthly": [
+      {
+        "month": "Jan",
+        "turnover": 78000,
+        "profit": 25600,
+        "newCustomers": 240
+      },
+      {
+        "month": "Feb",
+        "turnover": 82000,
+        "profit": 27000,
+        "newCustomers": 255
+      },
+      {
+        "month": "Mar",
+        "turnover": 85000,
+        "profit": 28500,
+        "newCustomers": 265
+      },
+      {
+        "month": "Apr",
+        "turnover": 87000,
+        "profit": 29300,
+        "newCustomers": 270
+      },
+      {
+        "month": "May",
+        "turnover": 89500,
+        "profit": 30100,
+        "newCustomers": 279
+      },
+      {
+        "month": "Jun",
+        "turnover": 91000,
+        "profit": 31200,
+        "newCustomers": 285
+      },
+      {
+        "month": "Jul",
+        "turnover": 92405,
+        "profit": 32218,
+        "newCustomers": 298
+      }
+    ]
+  }
+}
