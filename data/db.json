@@ -135,5 +135,328 @@
         "newCustomers": 298
       }
     ]
-  }
+  },
+  "customerTable": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "joinDate": "2023-09-15",
+      "status": "Active",
+      "spending": 5200,
+      "isNew": true
+    },
+    {
+      "id": 2,
+      "name": "Maria Garcia",
+      "email": "maria.garcia@example.com",
+      "joinDate": "2023-09-20",
+      "status": "New",
+      "spending": 3150
+    },
+    {
+      "id": 3,
+      "name": "David Johnson",
+      "email": "david.johnson@example.com",
+      "joinDate": "2023-09-25",
+      "status": "In progress",
+      "spending": 4800
+    },
+    {
+      "id": 4,
+      "name": "Lisa Wong",
+      "email": "lisa.wong@example.com",
+      "joinDate": "2022-11-10",
+      "status": "Completed",
+      "spending": 0
+    },
+    {
+      "id": 5,
+      "name": "Robert Taylor",
+      "email": "robert.taylor@example.com",
+      "joinDate": "2023-10-01",
+      "status": "New",
+      "spending": 6300
+    },
+    {
+      "id": 6,
+      "name": "Emma Wilson",
+      "email": "emma.wilson@example.com",
+      "joinDate": "2023-09-05",
+      "status": "Completed",
+      "spending": 8420
+    },
+    {
+      "id": 7,
+      "name": "James Brown",
+      "email": "james.brown@example.com",
+      "joinDate": "2023-08-12",
+      "status": "In progress",
+      "spending": 5680
+    },
+    {
+      "id": 8,
+      "name": "Sophia Martinez",
+      "email": "sophia.martinez@example.com",
+      "joinDate": "2023-07-28",
+      "status": "Completed",
+      "spending": 9340
+    },
+    {
+      "id": 9,
+      "name": "Michael Lee",
+      "email": "michael.lee@example.com",
+      "joinDate": "2023-08-30",
+      "status": "New",
+      "spending": 1250
+    },
+    {
+      "id": 10,
+      "name": "Olivia Rodriguez",
+      "email": "olivia.rodriguez@example.com",
+      "joinDate": "2023-09-18",
+      "status": "In progress",
+      "spending": 4750
+    },
+    {
+      "id": 11,
+      "name": "William Kim",
+      "email": "william.kim@example.com",
+      "joinDate": "2023-06-15",
+      "status": "Completed",
+      "spending": 12800
+    },
+    {
+      "id": 12,
+      "name": "Ava Nguyen",
+      "email": "ava.nguyen@example.com",
+      "joinDate": "2023-07-04",
+      "status": "In progress",
+      "spending": 5980
+    },
+    {
+      "id": 13,
+      "name": "Ethan Patel",
+      "email": "ethan.patel@example.com",
+      "joinDate": "2023-09-22",
+      "status": "New",
+      "spending": 2320
+    },
+    {
+      "id": 14,
+      "name": "Charlotte Thompson",
+      "email": "charlotte.thompson@example.com",
+      "joinDate": "2023-08-08",
+      "status": "Completed",
+      "spending": 7840
+    },
+    {
+      "id": 15,
+      "name": "Alexander Davis",
+      "email": "alexander.davis@example.com",
+      "joinDate": "2023-09-10",
+      "status": "In progress",
+      "spending": 4120
+    },
+    {
+      "id": 16,
+      "name": "Isabella Chen",
+      "email": "isabella.chen@example.com",
+      "joinDate": "2023-07-22",
+      "status": "Completed",
+      "spending": 11450
+    },
+    {
+      "id": 17,
+      "name": "Noah Wright",
+      "email": "noah.wright@example.com",
+      "joinDate": "2023-09-28",
+      "status": "New",
+      "spending": 1860
+    },
+    {
+      "id": 18,
+      "name": "Mia Lopez",
+      "email": "mia.lopez@example.com",
+      "joinDate": "2023-06-28",
+      "status": "Completed",
+      "spending": 9720
+    },
+    {
+      "id": 19,
+      "name": "Daniel Hernandez",
+      "email": "daniel.hernandez@example.com",
+      "joinDate": "2023-08-25",
+      "status": "In progress",
+      "spending": 3680
+    },
+    {
+      "id": 20,
+      "name": "Harper Scott",
+      "email": "harper.scott@example.com",
+      "joinDate": "2023-09-14",
+      "status": "New",
+      "spending": 2490
+    },
+    {
+      "id": 21,
+      "name": "Benjamin Young",
+      "email": "benjamin.young@example.com",
+      "joinDate": "2023-05-12",
+      "status": "Completed",
+      "spending": 14250
+    },
+    {
+      "id": 22,
+      "name": "Evelyn King",
+      "email": "evelyn.king@example.com",
+      "joinDate": "2023-08-02",
+      "status": "In progress",
+      "spending": 6780
+    },
+    {
+      "id": 23,
+      "name": "Matthew Adams",
+      "email": "matthew.adams@example.com",
+      "joinDate": "2023-09-26",
+      "status": "New",
+      "spending": 920
+    },
+    {
+      "id": 24,
+      "name": "Elizabeth Baker",
+      "email": "elizabeth.baker@example.com",
+      "joinDate": "2023-07-17",
+      "status": "Completed",
+      "spending": 8150
+    },
+    {
+      "id": 25,
+      "name": "Jacob Morris",
+      "email": "jacob.morris@example.com",
+      "joinDate": "2023-08-20",
+      "status": "In progress",
+      "spending": 4920
+    },
+    {
+      "id": 26,
+      "name": "Camila Diaz",
+      "email": "camila.diaz@example.com",
+      "joinDate": "2023-04-22",
+      "status": "Completed",
+      "spending": 16300
+    },
+    {
+      "id": 27,
+      "name": "William Turner",
+      "email": "william.turner@example.com",
+      "joinDate": "2023-09-24",
+      "status": "New",
+      "spending": 1780
+    },
+    {
+      "id": 28,
+      "name": "Sofia Parker",
+      "email": "sofia.parker@example.com",
+      "joinDate": "2023-06-10",
+      "status": "Completed",
+      "spending": 10250
+    },
+    {
+      "id": 29,
+      "name": "Lucas Campbell",
+      "email": "lucas.campbell@example.com",
+      "joinDate": "2023-08-14",
+      "status": "In progress",
+      "spending": 5470
+    },
+    {
+      "id": 30,
+      "name": "Avery Collins",
+      "email": "avery.collins@example.com",
+      "joinDate": "2023-09-17",
+      "status": "New",
+      "spending": 3120
+    },
+    {
+      "id": 31,
+      "name": "Scarlett Mitchell",
+      "email": "scarlett.mitchell@example.com",
+      "joinDate": "2023-05-28",
+      "status": "Completed",
+      "spending": 13080
+    },
+    {
+      "id": 32,
+      "name": "Henry Carter",
+      "email": "henry.carter@example.com",
+      "joinDate": "2023-07-30",
+      "status": "In progress",
+      "spending": 7350
+    },
+    {
+      "id": 33,
+      "name": "Victoria Reed",
+      "email": "victoria.reed@example.com",
+      "joinDate": "2023-09-29",
+      "status": "New",
+      "spending": 850
+    },
+    {
+      "id": 34,
+      "name": "Sebastian Phillips",
+      "email": "sebastian.phillips@example.com",
+      "joinDate": "2023-06-22",
+      "status": "Completed",
+      "spending": 9450
+    },
+    {
+      "id": 35,
+      "name": "Chloe Ross",
+      "email": "chloe.ross@example.com",
+      "joinDate": "2023-08-18",
+      "status": "In progress",
+      "spending": 6240
+    },
+    {
+      "id": 36,
+      "name": "Jack Howard",
+      "email": "jack.howard@example.com",
+      "joinDate": "2023-04-15",
+      "status": "Completed",
+      "spending": 15780
+    },
+    {
+      "id": 37,
+      "name": "Luna Ward",
+      "email": "luna.ward@example.com",
+      "joinDate": "2023-09-12",
+      "status": "New",
+      "spending": 2780
+    },
+    {
+      "id": 38,
+      "name": "Owen Torres",
+      "email": "owen.torres@example.com",
+      "joinDate": "2023-07-08",
+      "status": "Completed",
+      "spending": 8920
+    },
+    {
+      "id": 39,
+      "name": "Lily Peterson",
+      "email": "lily.peterson@example.com",
+      "joinDate": "2023-08-27",
+      "status": "In progress",
+      "spending": 4350
+    },
+    {
+      "id": 40,
+      "name": "Gabriel Gray",
+      "email": "gabriel.gray@example.com",
+      "joinDate": "2023-09-30",
+      "status": "New",
+      "spending": 1450
+    }
+  ]
 }

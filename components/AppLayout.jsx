@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import overviewLogo from "../assets/overviewLogo.png";
 import OverviewCard from "./OverviewCard";
+import detailedReport from "../assets/detailedReport.png";
 
 import {
   ShoppingCartOutlined,
   MoneyCollectOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import DataTable from "./DataTable";
 
 function AppLayout() {
   const [overview, setOverview] = useState([]);
@@ -80,6 +82,13 @@ function AppLayout() {
                 />
               </>
             )}
+          </div>
+          <div className="flex space-x-2">
+            <img src={detailedReport}></img>
+            <h1 className="text-2xl font-bold">Detailed Report</h1>
+          </div>
+          <div className="datatable">
+            <DataTable />
           </div>
         </div>
       </div>
