@@ -1,71 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Space, Table, Tag } from "antd";
 import { EditOutlined } from "@ant-design/icons";
-const columns = [
-  {
-    title: "CUSTOMER NAME",
-    dataIndex: "name",
-    key: "name",
-    render: (text) => (
-      <div className="flex">
-        <img
-          src="https://picsum.photos/seed/picsum/200/300"
-          className=" mr-2 rounded-2xl h-[20px] aspect-square"
-        ></img>
-        {text}
-      </div>
-    ),
-  },
-  {
-    title: "COMPANY",
-    dataIndex: "email",
-    key: "age",
-  },
-  {
-    title: "ORDER VALUE",
-    dataIndex: "spending",
-    key: "address",
-  },
-  {
-    title: "ORDER DATE",
-    dataIndex: "joinDate",
-  },
-  {
-    title: "STATUS",
-    dataIndex: "status",
-    render: (status) => {
-      if (status === "New") {
-        return <Tag color="blue">{status}</Tag>;
-      }
-      if (status === "Active") {
-        return <Tag color="green">{status}</Tag>;
-      }
-      if (status === "In progress") {
-        return <Tag color="orange">{status}</Tag>;
-      }
-      if (status === "Completed") {
-        return <Tag color="cyan">{status}</Tag>;
-      }
-    },
-  },
-  {
-    title: "",
-    key: "tags",
-    dataIndex: "tags",
-    render: () => {
-      <EditOutlined />;
-    },
-  },
-  {
-    title: "",
-    key: "",
-    render: (_, record) => <EditOutlined onClick={() => handleEdit(record)} />,
-  },
-];
-
-function handleEdit(record) {
-  console.log(record);
-}
+import DataModal from "./DataModal";
 
 const rowSelection = {
   onChange: (selectedRowKeys, selectedRows) => {
@@ -84,6 +20,81 @@ const rowSelection = {
 function DataTable() {
   const [data, setData] = useState();
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleEdit(record) {
+    setIsModalOpen(true);
+    setModalData(record);
+  }
+
+  function handleClose() {
+    setIsModalOpen(false);
+  }
+
+  const columns = [
+    {
+      title: "CUSTOMER NAME",
+      dataIndex: "name",
+      key: "name",
+      render: (text) => (
+        <div className="flex">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            className=" mr-2 rounded-2xl h-[20px] aspect-square"
+          ></img>
+          {text}
+        </div>
+      ),
+    },
+    {
+      title: "COMPANY",
+      dataIndex: "company",
+      key: "age",
+    },
+    {
+      title: "ORDER VALUE",
+      dataIndex: "spending",
+      key: "address",
+    },
+    {
+      title: "ORDER DATE",
+      dataIndex: "joinDate",
+    },
+    {
+      title: "STATUS",
+      dataIndex: "status",
+      render: (status) => {
+        if (status === "New") {
+          return <Tag color="blue">{status}</Tag>;
+        }
+        if (status === "Active") {
+          return <Tag color="green">{status}</Tag>;
+        }
+        if (status === "In Progress") {
+          return <Tag color="orange">{status}</Tag>;
+        }
+        if (status === "Completed") {
+          return <Tag color="cyan">{status}</Tag>;
+        }
+      },
+    },
+    {
+      title: "",
+      key: "tags",
+      dataIndex: "tags",
+      render: () => {
+        <EditOutlined />;
+      },
+    },
+    {
+      title: "",
+      key: "",
+      render: (_, record) => (
+        <EditOutlined onClick={() => handleEdit(record)} />
+      ),
+    },
+  ];
+
   useEffect(() => {
     fetch("http://localhost:3000/customerTable")
       .then((res) => res.json())
@@ -93,10 +104,12 @@ function DataTable() {
       });
   }, []);
 
+  const [modalData, setModalData] = useState();
+
   return (
     <div>
       <Table
-        key={(record) => record.id}
+        rowKey={(record) => record.id}
         columns={columns}
         dataSource={data}
         rowSelection={Object.assign({ type: "checkbox" }, rowSelection)}
@@ -107,6 +120,12 @@ function DataTable() {
       {data && (
         <div className="mt-2 text-gray-600 text-md">{data.length} results</div>
       )}
+
+      <DataModal
+        isModalOpen={isModalOpen}
+        handleClose={handleClose}
+        modalData={modalData}
+      />
     </div>
   );
 }
