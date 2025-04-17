@@ -34,10 +34,17 @@ const DataModal = ({ isModalOpen, handleClose, modalData }) => {
       .then((values) => {
         console.log(values);
 
-        fetch(`http://localhost:3000/customerTable/${modalData?.id}`, {
-          method: "PUT",
-          body: JSON.stringify(values),
-        });
+        if (modalData) {
+          fetch(`http://localhost:3000/customerTable/${modalData?.id}`, {
+            method: "PUT",
+            body: JSON.stringify(values),
+          });
+        } else {
+          fetch(`http://localhost:3000/customerTable`, {
+            method: "POST",
+            body: JSON.stringify(values),
+          });
+        }
 
         setLoading(false);
         handleClose();

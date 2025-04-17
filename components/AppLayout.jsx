@@ -9,6 +9,8 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import DataTable from "./DataTable";
+import DataModal from "./DataModal";
+import AddNewButton from "./AddNewButton";
 
 function AppLayout() {
   const [overview, setOverview] = useState([]);
@@ -83,9 +85,14 @@ function AppLayout() {
               </>
             )}
           </div>
-          <div className="flex space-x-2">
-            <img src={detailedReport}></img>
-            <h1 className="text-2xl font-bold">Detailed Report</h1>
+          <div className="flex justify-between">
+            <div className="flex space-x-2">
+              <img src={detailedReport}></img>
+              <h1 className="text-2xl font-bold w-[300px]">Detailed Report</h1>
+            </div>
+            <div className="flex space-x-2 items-center justify-center">
+              <AddNewButton />
+            </div>
           </div>
           <div className="datatable">
             <DataTable />
