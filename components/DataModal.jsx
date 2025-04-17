@@ -114,7 +114,11 @@ const DataModal = ({ isModalOpen, handleClose, modalData }) => {
         </Form.Item>
 
         <Form.Item className="flex justify-end gap-2">
-          <Button key="back" onClick={handleCancel}>
+          <Button
+            key="back"
+            onClick={handleCancel}
+            style={{ marginRight: "20px" }}
+          >
             Return
           </Button>
 
